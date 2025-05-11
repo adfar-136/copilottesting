@@ -15,9 +15,13 @@ let todos = [];
 // Routes
 // Get all todos
 app.get('/todos', (req, res) => {
-  res.json(todos);
-});
 
+  res.json(todos,"Make sure to add a todo");
+});
+app.get('/todosws', (req, res) => {
+
+    res.json(todos,"Make sure to add a todo");
+  });
 // Create a new todo
 app.post('/todos', (req, res) => {
   const { title, completed } = req.body;
